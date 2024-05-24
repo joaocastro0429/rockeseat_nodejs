@@ -14,11 +14,11 @@ const server=http.createServer((req,res)=>{
             name:"joao",
             email:"joaocastro@gmail.com"
         })
-        return res.end("Criacao de usuário")
+        return res.writeHead(201).end()
     }
     console.log(method,url)
    
-    return res.end('Hello world')
+    return res.writeHead(404).end()
 })
 
 server.listen(3333)
